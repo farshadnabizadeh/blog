@@ -15,11 +15,13 @@ use App\Models\Post;
 */
 
 Route::get('/', function (Request $request) {
-    $id=Post::first()->id;
+    $firstRecord = Post::first(); 
+    $id=$firstRecord->id;
     if(request()->has('post')){
         $id = request()->query('post');
+        $firstRecord = Post::find(intval(request()->query('post')));
     }
-    return view('Home',['Posts'=>Post::all(),'id'=>intval($id)]);
+    return view('Home',['Posts'=>Post::all(),'id'=>intval($id),'content'=>$firstRecord,]);
 });
 
 Route::group(['prefix' => 'admin'], function () {

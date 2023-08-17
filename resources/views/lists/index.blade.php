@@ -1,4 +1,4 @@
-<ul class="w-full h-full">
+<ul class="w-full h-[95%] overflow-y-scroll">
    @foreach($Posts as $Post)
    		@if($Post->status=="PUBLISHED")
    			<a href="{{ url('/?post='.$Post->id) }}">
