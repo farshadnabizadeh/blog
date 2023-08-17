@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
   @vite('resources/css/app.css')
 </head>
 <body>
@@ -17,7 +18,7 @@
 					</div>
 				</div>
 				<div class="w-full h-full flex-1">
-				  @include("lists/index")
+				  @include("lists/index",['Posts'=>$Posts,'id'=>$id]);
 				</div>
    		   </div>
    		   <div class="w-[80%] h-full"></div>

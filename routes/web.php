@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (Request $request) {
+    $id=Post::first()->id;
+    if(request()->has('post')){
+        $id = request()->query('post');
+    }
+    return view('Home',['Posts'=>Post::all(),'id'=>intval($id)]);
 });
 
-Route::get('/home',function(){return view('Home');});
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
