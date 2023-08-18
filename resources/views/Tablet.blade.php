@@ -62,8 +62,11 @@
                     </svg>
                 </div>
             </div>
-            <div class="w-full p-2">
-
+            <div id="TABLETCONTENT" class="w-full h-[84vh] overflow-y-scroll">
+				<h1 class="px-5 pt-10 pb-5 text-3xl text-white">{{ $content->title }}</h1>
+				<div class="px-5 text-xl text-white">
+					<?php echo($content->body); ?>
+				</div>
             </div>
         </div>
     </div>
@@ -91,6 +94,9 @@
                 $('.rotate').css({
                     'display': 'flex'
                 })
+				$('#TABLETCONTENT').css({
+					'display':'inline-block'
+				})
             })
             $('#OPENBTN').on('click', function() {
                 $('#ClOSEBTN__CONTAINER').css({
@@ -99,6 +105,9 @@
                 $('.rotate').css({
                     'display': 'none'
                 })
+				$('#TABLETCONTENT').css({
+					'display':'none'
+				})
             })
         })
 
