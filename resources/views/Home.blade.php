@@ -27,9 +27,9 @@
                 </div>
                 <div class="w-full py-4 space-y-2 lg:px-10 lg:text-base xl:text-lg xl:px-16 2xl:text-xl text-white formatting">
                     <?php echo($content->body); ?>
-                    <pre style="border-radius: 5px;">
+                    {{--  <pre style="border-radius: 5px;">
 						<code class="language-css">p { color: red }</code>
-					</pre>
+					</pre>  --}}
                 </div>
             </div>
         </div>
