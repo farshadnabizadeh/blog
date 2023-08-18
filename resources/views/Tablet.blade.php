@@ -66,9 +66,9 @@
 				<h1 class="px-5 pt-10 pb-5 text-3xl text-white">{{ $content->title }}</h1>
 				<div class="px-5 text-xl text-white">
 					<?php echo($content->body); ?>
-					<pre style="border-radius: 5px;display:flex;justify-content: start;">
+					{{--  <pre style="border-radius: 5px;display:flex;justify-content: start;">
 						<code class="language-css">p { color: red }</code>
-					</pre>
+					</pre>  --}}
 				</div>
             </div>
         </div>

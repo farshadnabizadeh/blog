@@ -53,3 +53,7 @@
 .formatting {
   text-align: justify;
 }
+
+p{
+  line-height: 45px;
+}
