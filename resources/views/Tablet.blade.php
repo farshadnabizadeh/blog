@@ -11,7 +11,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <div class="relative w-full min-h-screen bg-[#283747]">
+    <div class="relative w-full min-h-screen bg-[#283747] overflow-scroll">
         <div id="ClOSEBTN__CONTAINER" class="absolute top-0 left-0 w-full min-h-screen hidden items-center justify-center z-10">
             <div class="w-[98%] h-[900px] border-[1px] bg-[#283747] border-white rounded-md">
                 <div class="w-full flex justify-end p-3">
